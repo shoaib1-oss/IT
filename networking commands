@@ -1,0 +1,9 @@
+ipconfig , ipconfig /all , ipconfig /release , ipconfig /renew , ipconfig /flushdns
+netsh int ip  , 
+ping , ping 192.168.0.1 , ping loopback  , ping localhost, ping -t, ping -t 192.168.0.1. ,  ping -n 20 192.168.0.1 , ping -l 1500 192.168.0.1 , ping -a ,  ping -4 , ping -4 loopback,ping -6 loopback 
+tracert ,  tracert /d , 
+echo %COMPUTERNAME%
+netstat , netstat -e
+nslookup
+net stop , net start , net view , net share, net use x: \\computername\sharename, net user /add %username%
+whoami
