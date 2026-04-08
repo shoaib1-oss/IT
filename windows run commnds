@@ -48,3 +48,11 @@ Microsoft Defender Firewall - (firewall.cpl
 Microsoft Defender Firewall with Advanced Security - (wf.msc)
 Windows Features - (optionalFeatures
 Windows Memory Diagnostics- (Mdsched)
+inetcpl.cpl.
+appwiz.cpl
+firewall.cpl
+mmsys.cpl
+lusrmgr.msc
+powercfg.cpl
+powercfg.exe /hibernate on.
+sysdm.cpl
