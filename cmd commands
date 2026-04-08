@@ -1,0 +1,7 @@
+diskpart
+chkdsk
+ sfc /scannow / sfc /verifyonly
+  winver
+(Run > gpedit.msc / Run > secpol.msc
+  gpresult /R , gpresult /S computername /R , gpupdate 
+  
