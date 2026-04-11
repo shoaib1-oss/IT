@@ -1,0 +1,28 @@
+
+Update-MpSignature
+Start-MpScan -ScanType QuickScan
+Get-NetFirewallProfile | Format-Table Name, Enabled
+New-NetFirewallRule -DisplayName "Block RDP" -Direction Inbound -LocalPort 3389 -Protocol TCP -Action Block
+Get-NetFirewallRule -Enabled True -Direction Inbound | Format-Table -AutoSize
+New-LocalUser -Name "TestUser" -Password (ConvertTo-SecureString "Password@123" -AsPlainText -Force) -FullName "Test User" -Description "Test Account"
+Add-LocalGroupMember -Group "Remote Desktop Users" -Member "TestUser"
+Disable-LocalUser -Name "TestUser"
+lusrmgr.msc
+User Account Control settings
+Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System"\select-Object EnableUA
+Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System" -Name "EnableLUA" -Value 0
+Create a secure folder and set permissions
+Steps: Create folder, open Properties > Security > Edit > Add, type Authenticated Users, click Check Names, then adjust permissions like Modify and apply.
+netstat -ano | findstr LISTENING
+netstat -ano | findstr ESTABLISHED
+netstat -bano
+route print
+arp -a
+Get-DnsClientCache | Format-Table -AutoSize
+Get-NetIPConfiguration -Detailed | Format-List
+tasklist /svc /fo list
+tasklist /v /fi "status eq running"
+cmd /c sc query state= all
+netsh advfirewall firewall show rule name=all
+netsh advfirewall firewall show rule name=all dir=in
+netsh advfirewall firewall show rule name=all dir=out
