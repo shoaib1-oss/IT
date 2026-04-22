@@ -7,3 +7,5 @@ netstat , netstat -e
 nslookup
 net stop , net start , net view , net share, net use x: \\computername\sharename, net user /add %username%
 whoami
+netsh interface ip set address "connection name" static <IPv4 address> <IPv4 mask> <gateway>
+netsh interface ip set address "connection name" dhcp
