@@ -9,3 +9,4 @@ net stop , net start , net view , net share, net use x: \\computername\sharename
 whoami
 netsh interface ip set address "connection name" static <IPv4 address> <IPv4 mask> <gateway>
 netsh interface ip set address "connection name" dhcp
+netsh interface ip add dns "connection name" <dns server ip>
