@@ -5,3 +5,157 @@ chkdsk
 (Run > gpedit.msc / Run > secpol.msc
   gpresult /R , gpresult /S computername /R , gpupdate 
   
+(# 📀 DISKPART
+
+👉 **Kya karta hai:** Disk aur partitions manage karta hai  
+👉 **Kab use kare:** USB/HDD detect nahi ho raha, format karna hai  
+
+### 💻 Use:
+
+diskpart
+list disk
+select disk 1
+clean
+create partition primary
+format fs=ntfs quick
+exit
+
+
+⚠️ **Warning:** Galat disk select = pura data delete
+
+---
+
+# 🧪 CHKDSK
+
+👉 **Kya karta hai:** Disk errors fix karta hai  
+👉 **Kab use kare:** System slow, file corruption, drive errors  
+
+### 💻 Use:
+
+chkdsk C: /f /r
+
+
+✔ `/f` → errors fix  
+✔ `/r` → bad sectors detect  
+
+---
+
+# 🛡️ SFC (System File Checker)
+
+👉 **Kya karta hai:** Windows system files repair karta hai  
+👉 **Kab use kare:** OS crash, DLL missing, Windows errors  
+
+### 💻 Commands:
+
+Repair:
+
+sfc /scannow
+
+
+Check only:
+
+sfc /verifyonly
+
+
+---
+
+# 🪟 WINVER
+
+👉 **Kya karta hai:** Windows version dikhata hai  
+👉 **Kab use kare:** OS compatibility check  
+
+### 💻 Use:
+
+winver
+
+
+---
+
+# ⚙️ GPEDIT.MSC
+
+👉 **Kya karta hai:** System policies control karta hai  
+👉 **Kab use kare:** USB block, restrictions apply karna  
+
+### 💻 Open:
+
+Run → gpedit.msc
+
+
+---
+
+# 🔐 SECPOL.MSC
+
+👉 **Kya karta hai:** Security policies manage karta hai  
+👉 **Kab use kare:** Password rules, account lock settings  
+
+### 💻 Open:
+
+Run → secpol.msc
+
+
+---
+
+# 📊 GPRESULT
+
+👉 **Kya karta hai:** Applied policies dikhata hai  
+👉 **Kab use kare:** Policy apply nahi ho rahi  
+
+### 💻 Use:
+
+Local:
+
+gpresult /R
+
+
+Remote:
+
+gpresult /S computername /R
+
+
+---
+
+# 🔄 GPUPDATE
+
+👉 **Kya karta hai:** Policies force apply karta hai  
+👉 **Kab use kare:** Policy change ke baad  
+
+### 💻 Use:
+
+gpupdate /force
+
+
+---
+
+# 🎯 Easy Memory Trick
+
+| Problem              | Command        |
+|---------------------|---------------|
+| Disk issue          | diskpart      |
+| Drive error         | chkdsk        |
+| Windows problem     | sfc           |
+| Version check       | winver        |
+| Policy setting      | gpedit        |
+| Security rules      | secpol        |
+| Policy check        | gpresult      |
+| Policy apply        | gpupdate      |
+
+---
+
+# 🚀 Real Use Example (Interview Level)
+
+- Printer install nahi ho raha → `gpresult`
+- Policy apply nahi ho rahi → `gpupdate /force`
+- System slow → `chkdsk`
+- Windows error → `sfc /scannow`
+- USB block/unblock → `gpedit.msc`
+
+---
+
+# 💡 Important Notes
+
+- Admin CMD use karo (Run as Administrator)
+- Disk commands use karte time careful raho
+- SFC aur CHKDSK system repair ke liye powerful tools hain
+- Group policy commands enterprise environment me use hote hain
+
+---
