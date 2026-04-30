@@ -148,6 +148,11 @@
 - Check print server/OS issues.
 
 ---
+ Laser: Replace toner, apply maintenance kit, calibrate, clean.
+ Inkjet: Clean heads, replace cartridges, calibrate, clear jams.
+ Thermal: Replace paper, clean heating element, remove debris.
+ Impact: Replace ribbon, replace print head, replace paper.
+ 3D printer: Clean the filament nozzle, resin reservoir, and anywhere there is a supply or distribution of plastic/resin. Also check the platform (print bed), check whether fans are working, and check the axis and gear movement.
 
 ## ⚙️ Unable to Install Printer
 - Verify physical/network connection.
