@@ -4,4 +4,5 @@ chkdsk
   winver
 (Run > gpedit.msc / Run > secpol.msc
   gpresult /R , gpresult /S computername /R , gpupdate 
- 
+ net start spooler
+net stop spooler 
