@@ -8,3 +8,4 @@ chkdsk
 net stop spooler 
 sfc/?
 tasklist
+taskill /?
