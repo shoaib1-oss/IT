@@ -6,3 +6,5 @@ chkdsk
   gpresult /R , gpresult /S computername /R , gpupdate 
  net start spooler
 net stop spooler 
+sfc/?
+tasklist
