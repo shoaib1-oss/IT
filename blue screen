@@ -82,3 +82,5 @@ check the hard drive for errors and recover data.
 Uninstall software you no longer need. Use the Programs and Features applet in Control Panel to unin- 
 stall programs you no longer need. Also, for Windows 8, uninstall any apps on the Start screen you no 
 longer use and turn off live tiles you don’t watch. )
+tasklist | more
+taskkill /f /pid:7132
