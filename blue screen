@@ -1,0 +1,84 @@
+blue screen of death
+Use the chkdsk command: chkdsk C: /r
+Repair the BCD: bootrec /RebuildBCD
+Repair the MBR: bootrec /FixMBR 
+Repair the boot sector : bootrec /FixBoot
+Format a hard drive volume : format D:
+Use diskpart to start over with a fresh file system : DISKPART
+list disk 
+select disk 0 
+list partition 
+select partition 1 
+clean
+msinfo32.exe
+Public network. When using Public network security, Windows configures strong firewall settings and 
+you cannot join a homegroup or domain. 
+Private network. When using Private network security, you can join a homegroup or domain and share 
+files and printers. 
+Windows 7 offers three network security options, which are managed by Network Discovery settings that 
+allow this computer to see other computers on the network and other computers can see this computer: 
+Public network. Network Discovery is turned off and you cannot join a homegroup or domain. 
+This option is the most secure. 
+Home network. Network Discovery is turned on and you can join a homegroup. 
+Work network. Network Discovery is turned on, you can join a domain, but you cannot join a homegroup
+win+p windows screen
+(FLICKERING, DIM, OR OTHERWISE POOR VIDEO 
+Use these tips to solve problems with bad video: Verify Windows display settings. Try using the native resolution for the LCD panel. This resolution will be the highest resolution available unless the wrong video 
+drivers are installed. Try adjusting the brightness, which is a function of the backlight component of the LCD panel. Try updating the video drivers. Download the latest drivers 
+from the laptop’s manufacturer’s website. Bad drivers can cause an occasional ghost cursor on screen. A ghost cursor is a trail left behind when you move the mouse. 
+A flickering screen can be caused by bad video drivers, a low refresh rate, a bad inverter, or loose connections inside the laptop. To adjust the refresh rate, use Control Panel 
+to open the Display window. In the Display window, click Change display settings. In the Screen Resolution window, click Advanced settings. On the Monitor tab, select the 
+highest refresh rate available )
+(Registry location. The Windows registry is stored in the C:\Windows\System32\config folder. 
+Backup of the registry. A backup of the registry is stored in the C:\Windows\System32\config\RegBack 
+folder. 
+Fonts. Fonts are stored in the C:\Windows\Fonts folder. 
+Temporary files. These files, which are used by Windows when it is installing software and performing 
+other maintenance tasks, are stored in the C:\Windows\Temp folder. 
+Offline files. Offline files are stored in the client-side caching (CSC) folder, which is C:\Windows\CSC.)
+disk cleanup : cleanmgr.exe
+System Restore: (rstrui.exe)
+recimg /createimage D:\MyImage
+recimg /showcurrent
+bcdedit /set {default} 
+bootmenupolicy legacy
+recimg /setcurrent <path> 
+dir a*.???
+dir /p
+dir /w
+dir *.txt
+dir /s
+rd (remove directory)
+DEL OR ERASE <FILENAME>
+ren (rename)
+COPY <SOURCE> [<DESTINATION>] [/V] [/Y](E:\> copy C:\Data\Myfile.txt E:\mydata\Newfile.txt)
+RECOVER <FILENAME>(C:\Data> recover Myfile.txt)
+EXPAND [/D] <SOURCE> [<DESTINATION>](expand /d \installme , expand myprogram.cab , expand myprogram.cab 
+–f:myfile.exe )
+XCOPY <SOURCE> [<DESTINATION>] [/S] [/C] [/Y] [/D:DATE](xcopy C:\docs\*.* E: /s , xcopy C:\docs\*.* E: /e , xcopy C:\docs\*.* E: /d: 
+03-14-15 , xcopy C:\docs\*.* E: /y , xcopy C:\docs\*.* E: /c ,)
+(ROBOCOPY <SOURCE> <DESTINATION> [/S] [/E] [/LOG: FILENAME] [ /LOG+: FILENAME] 
+[/MOVE] [/PURGE](robocopy C:\docs\*.* E: /s , robocopy C:\docs\*.* E: /e , robocopy C:\docs\*.* E: /log:Mylog.txt , robocopy C:\docs\*.* E: /log+:Mylog.txt , robocopy C:\docs\*.* E: /move , robocopy C:\docs\*.* E: /purge)
+CHAPTER 10 
+476 Maintaining Windows 
+ROBOCOPY <SOURCE> <DESTINATION> [/S] [/E] [/LOG: FILENAME] [ /LOG+: FILENAME] 
+[/MOVE] [/PURGE] 
+The robocopy (robust file copy) command is similar to the xcopy command. It offers more options than 
+xcopy and is intended to replace xcopy. A few options for robocopy are listed in Table 10-6. 
+CHKDSK [ DRIVE:] [/F] [/R](chkdsk C:/f, chkdsk C:/r , 
+DEFRAG [ DRIVE:] [/C](defrag C: , defrag /c)
+FORMAT < DRIVE:> [/V: LABEL] [/Q] [FS:< FILESYSTEM>] (format D: , format D: /q , format D: /fs:NTFS , format D: /fs:FAT32 , format D: /fs:EXFAT)
+SHUTDOWN [/M \ \COMPUTERNAME] [/I] [/R] [/S] [/F] [/T XX](shutdown /r , shutdown /s /m \\bluelight , shutdown /s /m \\bluelight /t 60 , shutdown /i  , shutdown /s /full /t 0)
+(Commands useful to manage files, folders, and storage media include help, dir, del, ren, copy, recover, 
+expand, xcopy, robocopy, md, cd, rd, chkdsk, defrag, and format.)
+Task Manager (taskmgr.exe)
+(Verify critical Windows settings. Make sure Windows updates are current. Verify that antivirus software 
+is updated and set to routinely scan for viruses. Make sure the network connection is secured. If the 
+system is experiencing a marked decrease in performance, suspect a virus and use up-to-date antivirus 
+software to perform a full scan of the system. 
+Clean up, defrag, and check the hard drive. Make sure at least 15 percent of drive C: is free. Make 
+sure a magnetic hard drive is being defragged weekly. If you suspect hard drive problems, use chkdsk to 
+check the hard drive for errors and recover data. 
+Uninstall software you no longer need. Use the Programs and Features applet in Control Panel to unin- 
+stall programs you no longer need. Also, for Windows 8, uninstall any apps on the Start screen you no 
+longer use and turn off live tiles you don’t watch. )
