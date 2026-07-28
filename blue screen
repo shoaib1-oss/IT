@@ -86,3 +86,8 @@ tasklist | more
 taskkill /f /pid:7132
 (Component Services (also called COM+) tool, which is a 
 Microsoft Management Console snap-in, can be used to register components.)
+bcdedit /set {default} bootmenupolicy legacy
+System Restore: C:\Windows\system32\rstrui.exe.
+(Lists drivers and services loaded during Safe Mode: HKLM\System\CurrentControlSet\Control\SafeBoot\Minimal 
+Lists drivers and services loaded during Safe Mode with Networking: HKLM\System\CurrentControlSet\Control\ 
+SafeBoot\Network )
