@@ -84,3 +84,5 @@ stall programs you no longer need. Also, for Windows 8, uninstall any apps on th
 longer use and turn off live tiles you don’t watch. )
 tasklist | more
 taskkill /f /pid:7132
+(Component Services (also called COM+) tool, which is a 
+Microsoft Management Console snap-in, can be used to register components.)
