@@ -1,0 +1,29 @@
+(c: Makes drive C: the current drive. The default directory is root. 
+2. dir Examines the contents of drive C:. If this is not your Windows 
+volume, try a different drive letter. 
+3. cd \windows\system32\config Makes the Windows registry folder the current folder. 
+4. ren default default.save 
+5. ren sam sam.save 
+6. ren security security.save 
+7. ren software software.save 
+8. ren system system.save 
+Renames the five registry files. 
+9. cd regback Makes the registry backup folder the current folder. 
+10. copy system 
+c:\windows\system32\config 
+For hardware problems, first try copying just the System hive from 
+the backup folder to the registry folder and then reboot. 
+11. copy software 
+c:\windows\system32\config 
+For software problems, first try copying just the Software hive to 
+the registry folder, and then reboot. 
+12. copy system 
+c:\windows\system32\config 
+13. copy software 
+c:\windows\system32\config 
+14. copy default 
+c:\windows\system32\config 
+15. copy sam 
+c:\windows\system32\config 
+16. copy security 
+c:\windows\system32\config 
