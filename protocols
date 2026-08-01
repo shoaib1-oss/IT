@@ -18,4 +18,9 @@ NetBIOS over TCP/IP. Earlier versions of SMB required NetBIOS over TCP/IP be
 enabled. Ports used on these networks are:
 SMB over UDP uses ports 137 and 138.
 SMB over TCP uses ports 137 and 139.
-Current versions of SMB don’t require NetBIOS over TCP.)
+Current versions of SMB don’t require NetBIOS over TCP.
+445SMB direct over TCP/IPCurrent releases of SMB and SMB2 use port 445 for both TCP and UDP traffic.
+427SLP and AFPService Location Protocol (SLP) uses port 427 to find printers and file
+sharing devices on a network. AFP relies on SLP and port 427 to find
+resources on a local network.
+548AFPAFP over TCP/IP is used for file sharing and file services)
