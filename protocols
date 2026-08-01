@@ -1,0 +1,21 @@
+(20FTP clientThe FTP client receives data on port 20 from the FTP server.
+21FTP serverThe FTP server listens on port 21 for commands from an FTP client.
+22SSH serverA server using the SSH protocol listens at port 22.
+23Telnet serverA Telnet server listens at port 23.
+25SMTP email serverAn email server listens at port 25 to receive email from a client computer.
+53DNS serverA DNS server listens at port 53.
+80Web server using HTTPA web server listens at port 80 when receiving HTTP requests.
+110POP3 email clientAn email client using POP3 receives email at port 110.
+143IMAP email clientAn email client using IMAP receives email at port 143.
+443Web server using HTTPSA web server listens at port 443 when receiving HTTPS transmissions.
+3389RDP apps, including
+Remote Desktop and
+Remote AssistanceRemote Desktop and Remote Assistance listen at port 3389.
+137, 138,
+and 139SMB over NetBIOSNetBIOS is a legacy suite of protocols used by Windows before TCP/IP.
+To support legacy NetBIOS applications on a TCP/IP network, TCP offers
+NetBIOS over TCP/IP. Earlier versions of SMB required NetBIOS over TCP/IP be
+enabled. Ports used on these networks are:
+SMB over UDP uses ports 137 and 138.
+SMB over TCP uses ports 137 and 139.
+Current versions of SMB don’t require NetBIOS over TCP.)
