@@ -1,0 +1,4 @@
+gpedit.msc
+In the Computer Configuration group, expand the Windows Settings group. Right-click Policy-based QoS and click Create new policy
+DSCP 
+gpupdate.exe 
