@@ -1,0 +1,11 @@
+(1. First check the status indicator lights on the network ports for connectivity and activity. 
+2. Use a loopback plug to verify each port. The loopback plug can work on ports provided by a computer, 
+wall jack, patch panel, switch, router, or other device that is turned on. If you find a bad port, try a 
+different port on a switch, router, or patch panel. You might need to replace the device.  
+3. For short straight-through cables connecting a computer to a wall jack or other nearby device, 
+exchanging the straight-through cable for a known good one is easier and quicker than using a cable 
+tester to test the cable. 
+4. Use a cable tester to verify a cable permanently installed alongside or inside a wall is good. To test the 
+cable, you have to first disconnect it from a computer, patch panel, switch, or other device at both ends 
+of the cable. Common problems with networks are poorly wired termination in patch panels and wall 
+jacks. If the cable proves bad, first try reinstalling the two jacks before you replace the cable. 
