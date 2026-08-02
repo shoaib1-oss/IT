@@ -11,3 +11,5 @@ netsh interface ip set address "connection name" static <IPv4 address> <IPv4 mas
 netsh interface ip set address "connection name" dhcp
 netsh interface ip add dns "connection name" <dns server ip>
 arp -a
+TCP/IP utilities: ping, ipconfig, ifconfig, 
+tracert, netstat, nbtstat, net, netdom, and nslookup.
