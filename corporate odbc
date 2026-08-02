@@ -1,0 +1,6 @@
+Open Database Connectivity 
+(Open Control Panel in Classic view and click Administrative Tools, Double-click ODBC Data Sources ,The ODBC Data Source Administrator box opens)
+(To make the data source apply to all users of the system, click the System DSN tab , Click Add , The Create New Data Source box appears ,Scroll down to and select SQL Server and 
+click Finish. Follow directions on screen to enter the name of the SQL Server computer on the network and the sign-in ID and password to SQL Server ,The database administrator in your organization can 
+supply this information)
+(If you don’t see the driver you need in the Create New Data Source box, close all windows and use Explorer to locate the C:\Windows\SysWOW64\Odbcad32.exe program file)
