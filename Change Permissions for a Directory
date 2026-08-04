@@ -1,0 +1,3 @@
+Change Permissions for a Directory
+cp mymemo mymemo.charlie
+sudo apt-get install coreutils
