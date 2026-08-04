@@ -1,0 +1,5 @@
+UPDATE LINUX FROM THE SHELL PROMPT
+sudo apt-get update 
+sudo apt-get upgrade 
+sudo apt-get install update-manager-core 
+sudo do-release-upgrade
