@@ -1,0 +1,14 @@
+Install FTP Server in Ubuntu
+sudo apt-get install vsftpd
+cd /etc 
+sudo cp vsftpd.conf vsftpd.backup
+sudo vi vsftpd.conf
+sudo restart vsftpd 
+dir
+get
+put
+get mymemo
+ifconfig
+sudo cat /var/log/vsftpd.log 
+sudo grep “LOGIN” /var/log/vsftpd.log 
+chmod go+rwx /home/jean 
