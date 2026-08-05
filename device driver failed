@@ -1,0 +1,11 @@
+X:\Windows\setupapi.log
+X:\$Windows.~BT\Sources\ Panther\setupact.log
+X:\$Windows.~BT\Sources\Panther\setuperr.log
+X:\$Windows.~BT\Sources\ Panther\PreGatherPnPList.log
+X:\$Windows.~BT\Sources\Panther\miglog.xml
+X:\Windows\Inf\setupapi*.log
+X:\Windows\Inf\setupapi.app.log
+X:\Windows\Panther\PostGatherPnPList.log
+findstr /C:"[SR] Cannot repair member file" %windir%\logs\cbs\cbs. log>sfcdetails.txt
+icacls filename_including_path /grant administrators:m
+  
