@@ -1,0 +1,108 @@
+Current Directory and Parent Directory (. and ..)
+C:\Windows>cd..
+Drive Navigation Inputs (C: or D: or x:)
+C:\Windows>D:
+attrib [+|-h] [+|-r] [+|-a]
+[+|-s][drive:][path]filename [/S][/D]
+Explanation:+ adds an attribute.
+- takes away an attribute.
+h is the hidden attribute.
+r is the read-only attribute.
+a is the archive file attribute.
+s is the system attribute.
+[drive:] is the drive where the file is located.
+[path] is the directory/subdirectory where the file is located.
+filename is the name of the file.
+[/S] includes subfolders.
+[/D] includes folders.
+Example:attrib +h c:\cheryl.bat
+bcdedit [/createstore] [/copy] [/create] [/delete] [/deletevalue] [/set] [/enum] [/bootsequence] [/default] [/displayorder] [/timeout]
+Explanation:[/createstore] creates a new empty BCD store that is not a system store.
+[/copy] makes a copy of a specific boot entry contained in the BCD store.
+[/create] creates a new entry in the BCD store.
+[/delete] deletes an element from a specific entry in the BCD store.
+[/deletevalue] deletes a specific element from a boot entry.
+[/set] sets a specific entry’s option value.
+[/enum] lists entries in a store.
+[/bootsequence] specifies a display order that is used one time only. The next time the computer boots, the original display order is shown.
+[/default] selects the entry used by the boot manager when the timeout expires.
+[/displayorder] specifies a display order that is used each time the computer boots.
+[/timeout] specifies, in seconds, the amount of time before the boot manager boots using the default entry.
+Example:bcdedit / set Default debug on
+This command troubleshoots a new operating system installation. It is the default option that appears in the Boot Manager menu.
+Notes:Use the bcdedit /? types command to see a list of data types. Use the bcd /? formats command to see a list of valid data formats. To get detailed information on any of the options, type bcdedit /? followed by the option. For example, to see information on how to export the BCD, type bcd /? export.
+bootrec
+The bootrec command is used in the System Recovery environment to repair and recover from hard drive problems.
+Syntax:bootrec [/FixMbr] [/FixBoot] [/ScanOs] [/RebuildBcd]
+Explanation:[/FixMbr] repairs the hard drive MBR (master boot record) by copying a new MBR to the system partition. The existing partition table is not altered.
+[/FixBoot] repairs the hard drive boot sector if it has been corrupted and replaces it with a higher boot sector or if an earlier version of Windows has been installed after Windows 10 or Windows 11.
+[/ScanOs] looks for compatible operating system installations that do not currently appear on the Boot Manager list.
+[/RebuildBcd] scans all disks for operating systems compatible with Windows Vista or higher and optionally rebuilds the BCD store. The BCD store provides structured storage for boot settings, which is especially helpful in multiple-operating-system environments. Discovered operating systems can be added to the BCD store.
+Example:bootrec /fixmbr
+chkdsk [drive:] [/r] [/f] [/i] [/b]
+chkntfs c:
+cipher [/e] [/d] [/f] [/q] [/k] [/u] [/n] [path]
+copy [/a] [/y] [/-y] source [destination]
+defrag [drive:] [/a] [/c] [/x]
+del name [/p][/f][/s]
+dir [drive:] [path] [filename] [/a:attribute] [/o] [/p] [/s] [/w]
+diskpart [/add|/delete] [devicename] [drivename | partitionname] [size]
+dism /Online /Cleanup-Image /[/CheckHealth] [/ScanHealth] [/RestoreHealth]
+dxdiag [/dontskip] [whql:on|/whql:off] [/64bit target] [/x filename] [/t filename]
+enable name [start-type]
+SERVICE_BOOT_START
+SERVICE_SYSTEM_START
+SERVICE_AUTO_START
+SERVICE_DEMAND_START
+expand [-i] source [destination]
+format [driveletter:] [/q] [/fs:filesystem] [/v:label][/x]
+format c: /fs:ntfs
+gpresult [/s computer] [/u domain\user] [/p password] [/user target_user] [ /r] [/v] [/z]
+gpupdate [/target:{computer | user}] [/force] [/wait:value] [/logoff] [/boot]
+ipconfig [/allcompartments] [/all|/renew [adapter] | /release [adapter]|/renew6 [adapter]|/release6 [adapter]| /flushdns|displaydns|/registerdns|/showclassid [adapter]| /setclassid adapter [classid]|/showclassid6 [adapter]| /setclassid6 adapter [classid]]
+mmc [path\filename.msc][/a] [/64] [/32]
+more filename
+msconfig
+msinfo32
+mstsc [/v:computer[:port]
+ nbtstat [-a remotename] [-A IPaddress] [-c] [-S]
+net [computer] [group] [localgroup] [print] [session] [share] [use] [user] [view]
+net use [drive_letter] [\\server_name\share_name /user:domain_name\user_name [password]]
+net user [username [password | *] [options]] [/domain]
+net user cschmidt
+netdom {add | computername | join | move | query | remove | renamecomputer | reset | resetpwd | verify} [<Computer>] [{/d: | /domain:} <Domain>] [<Options>]
+netstat [-a] [-e] [-n] [-o] [-p protocol] [-r] [-s]
+nslookup [-option] [hostname] [server]
+pathping [-g host-list] [-h maximum_hops] [-i address] [-n] [-p period] [-q num_queries] [-w timeout] [-4] [-6] target_name
+ping [-t] [-a] [-n count] [-l size] [-i ttl] [-S source_addr] [-4] [-6] target
+rd [driveletter:][path] name
+regedit
+regsvr32
+regsvr32 [/u] name
+ren [driveletter:][path] name1 name2
+robocopy [source] [destination] [file [file]...] [options]
+services.msc
+set [variable = value]
+set allowallpaths = true
+set allowremovablemedia = true
+set allowwildcards = true
+sfc [/scannow] [/verifyonly] [/scanfile=file_name] [/verifyfile=file_name] [/offwindir=windows_directory] [/offbootdir=boot_directory]
+sfc /scannow
+sfc /scannow /offwindir=c:\Windows
+shutdown [-l] [-s] [-r] [-a] [-f] [-m [\\computer_name]] [-t xx] [-c "message"]
+shutdown -f -m \\Raina-PC -t 30 -c "Going down in 30 seconds, daughter"
+systeminfo [/s computer] [/u domain\user] [/p password] [/fo [table | list | csv]]
+systeminfo
+systeminfo /s CSchmidt /u pearson\cschmidt /p G#T0UT0FH3R#
+taskkill [/s computer] [/u domain\user] [/p password] [/pid process_id] [/im name] [/f] [/t]
+taskkill /pid 1230 /pid 1231 /pid 1242
+taskkill /im iexplore.exe
+tasklist [/s computer] [/u domain\user] [/p password] [/fo {table|list|csv}] [/v]
+tracert [-d] [destination]
+wbadmin [start backup] [stop job] [get versions] [get items]
+wbadmin start backup
+whoami [/upn | /fqdn | /logonid]
+whoami { [/user] [/groups] [/claims] [/priv] } [/fo format] [/nh]
+whoami /all [/fo format] [/nh]
+winver
+xcopy source [destination] [/e] [/h]
