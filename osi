@@ -1,0 +1,14 @@
+(Application Layer (Layer 7)
+Defines the communications services to applications. The only layer to interact with the user.
+Presentation Layer (Layer 6)
+Defines the syntax or language (.txt, html, .jpg, mp4), encryption or decryption, and compression or decompression of data.
+Session Layer (Layer 5)
+Defines how to establish, manage, and terminate conversations. It provides dialogue control between nodes. It also supports simplex, half-duplex, and full-duplex communications.
+Transport Layer (Layer 4)
+Defines the reliability of a network by choosing either the connection-oriented Transmission Control Protocol (TCP) or the connectionless User Datagram Protocol (UDP). It provides mechanisms for the reordering of the incoming data stream when packets arrive out of order, reassembly of the data if the packets fragmented during transmission, error recovery, and flow control.
+Network Layer (Layer 3)
+Defines end-to-end delivery of packets. It uses logical addressing (IP addressing, using either IPv4 or IPv6) to identify endpoints and to provide connectivity to millions of networks around the world. It also defines how routing works and how routes are learned so the packets can be delivered (path determination) by examining the destination IP address of a packet, comparing that address to the IP routing table, fragmenting the packet if the outgoing interface requires smaller packets, and queuing the packet to be sent out to the interface. It breaks collision and broadcast domains.
+Data Link Layer (Layer 2)
+Defines specifications and protocols for getting data across a link or medium. It provides physical addressing, media access control (MAC), logic link control (LLC), error detection, and frame assembly. It also helps relieve congestion and collisions on a network segment.
+Physical Layer (Layer 1)
+Defines the physical characteristics of the medium (electrical, light, or wireless). It defines connector and interface specifications, as well as the medium (cable) requirements. Connectors, pins, use of pins, electrical voltage, encoding, and light modulation are all part of different physical layer specifications for sending a bit stream on a computer network. When something is unplugged, it is often referred to colloquially as a “Layer 1 problem.”
