@@ -106,3 +106,4 @@ whoami { [/user] [/groups] [/claims] [/priv] } [/fo format] [/nh]
 whoami /all [/fo format] [/nh]
 winver
 xcopy source [destination] [/e] [/h]
+Get-NetFirewallRule -Enable True -Direction Inbound | Format-Table -AutoSize
