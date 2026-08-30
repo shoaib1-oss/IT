@@ -1,0 +1,64 @@
+ow to Join a Windows 11 Device to Microsoft Entra ID
+🔹 Requirements:
+
+Windows 11 Pro, Enterprise, or Education (Home edition does not support Entra ID Join)
+
+A Microsoft 365 Business or Enterprise subscription
+
+A licensed user account in Microsoft Entra ID (Azure AD)
+
+Internet connection
+
+Option 1: Join During Initial Setup (Out-of-box experience)
+If you're setting up a new device or resetting Windows 11:
+
+Power on the device and begin the Windows 11 setup process.
+
+Choose your region and keyboard layout, then proceed.
+
+On the "Let’s add your Microsoft account" or "Sign in with Microsoft" screen, enter the Entra ID (Microsoft 365) email and password.
+
+If prompted, complete Multi-Factor Authentication (MFA).
+
+Windows will automatically join the device to Entra ID, apply any Intune/Endpoint Manager policies, and prepare the desktop.
+
+Option 2: Join an Existing Windows 11 Device to Entra ID
+If the device is already running Windows 11:
+
+Open Settings
+→ Start > Settings > Accounts
+
+Go to Access work or school
+→ Click “Access work or school” in the left menu.
+
+Click “Connect”
+
+In the dialog box, choose:
+→ “Join this device to Entra ID” (You may see it as "Join this device to Azure Active Directory" on older builds)
+
+Enter the user’s Microsoft 365 (Entra ID) email address, then click Next.
+
+Enter the user’s password and complete MFA, if required.
+
+Review the account and organization details, then click Join.
+
+After the device is successfully joined, click Done.
+
+Restart the computer.
+
+On the login screen, choose Other user, and sign in with the Entra ID credentials (e.g. user@company.com).
+
+Optional: Verify the Join Status
+To confirm the device is joined:
+
+Go to Settings > System > About
+
+Scroll to "Device specifications" > "Domain or workgroup"
+
+It should say: Azure AD joined
+
+Or open Command Prompt and run:
+
+dsregcmd /status
+Look under "AzureAdJoined" = YES
+
